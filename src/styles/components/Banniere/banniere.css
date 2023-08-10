@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.BanniereStyle {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.BanniereStyle img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.BanniereStyle h1 {
+  font-size: 48px;
+  font-weight: 500;
+  width: 705px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Déplace le h1 pour le centrer parfaitement */
+  z-index: 2; /* Assure que le h1 est au-dessus de l'image */
+  color: white;
+}/*# sourceMappingURL=banniere.css.map */
