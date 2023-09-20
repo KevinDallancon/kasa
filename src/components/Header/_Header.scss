@@ -1,0 +1,49 @@
+.header-style {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 95%;
+  img {
+    height: 55px;
+    @include responsive(smartphone) {
+      height: 40px;
+    }
+  }
+  .nav {
+    .nav_list{
+      list-style-type: none; 
+      display: flex;
+      gap: 50px;
+      color: $primary-color;
+      font-size: 24px;
+  
+      &-item {
+        
+        a {
+          color: $primary-color;
+          text-decoration: none;
+        }
+      
+        &--active {
+          position: relative;
+
+          
+          a {
+            color: $primary-color;
+            transition: all 0.2s ease-in-out;
+            text-decoration: underline;
+            text-decoration-color: $primary-color;
+          }
+        }
+      }      
+    }
+  }
+  @include responsive(smartphone) {
+    max-width: 425px;
+    height: 40px;
+  }
+} 
+
+

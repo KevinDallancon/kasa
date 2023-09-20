@@ -1,9 +1,233 @@
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 body {
-  margin-top: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: auto;
+  max-width: 1440px;
+  padding-top: 40px;
+}
+
+.banner {
+  margin: 43px auto;
+  background-image: url("../../assets/Mask Group.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 223px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.banner_about {
+  background-image: url("../../assets/montagne.png");
+  margin: 43px auto;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 223px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.banner h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.ContainerStyle {
+  background-color: #F6F6F6;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  border-radius: 25px;
+}
+.ContainerStyle .CardStyle {
+  border-radius: 10px;
+  position: relative;
+  width: 30%;
+  height: 255px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+  margin: 10px;
+}
+.ContainerStyle .CardStyle::after {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.ContainerStyle .CardStyle:hover {
+  box-shadow: 5px 5px 15px -2px #000000;
+}
+.ContainerStyle .CardStyle h2 {
+  width: 70%;
+  position: absolute;
+  z-index: 50;
+  top: 78%;
+  left: 5%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ContainerStyle .CardStyle img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.ContainerStyle .CardStyle:hover img {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1024px) {
+  .ContainerStyle .CardStyle {
+    width: 100%;
+  }
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  max-width: 1023px;
+  height: auto;
+}
+.collapse.active .collapse_title_icon {
+  transform: rotate(0deg);
+}
+.collapse.active .collapse_content {
+  height: auto;
+  visibility: visible;
+}
+.collapse_title {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  height: 47px;
+}
+.collapse_title .collapse_title_icon {
+  transition: transform 0.2s;
+  transform: rotate(-180deg);
+}
+.collapse_content {
+  padding-left: 10px;
+  color: #FF6060;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.active .collapse_content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.HeaderStyle {
+  display: flex;
+  max-width: 95%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+  height: 68px;
+  color: #FF6060;
+}
+.HeaderStyle img {
+  max-width: 200px;
+  margin-right: 20px;
+}
+.HeaderStyle .nav_list {
+  width: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.HeaderStyle .nav_list ul {
+  display: flex;
+  justify-content: space-between;
+}
+.HeaderStyle .nav_list ul li {
+  font-size: 24px;
+  margin-left: 60px;
+  list-style-type: none;
+  cursor: pointer;
+}
+.HeaderStyle .nav_list ul li_item_active {
+  position: relative;
+  color: #FF6060;
+  transition: all 0.2s ease-in-out;
+  -webkit-text-decoration: underline solid #FF6060;
+          text-decoration: underline solid #FF6060;
+}
+@media screen and (max-width: 1230px) {
+  .HeaderStyle {
+    width: 100%;
+  }
+}
+
+.FooterStyle {
+  background-color: black;
+  height: 209px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.FooterStyle p {
+  color: white;
+  width: 513px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FooterStyle img {
+  width: 122px;
+}
+
+.aboutStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+.errorStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+}
+.errorStyle h1 {
+  font-weight: 700;
+  font-size: 280px;
+  margin: 0;
+}
+.errorStyle h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 150px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+.flex {
+  background: #F6F6F6;
+  border-radius: 25px;
+  height: auto;
+  padding: 20px;
+
+  .box-card {
+  margin: 30px;
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  }
+
+}

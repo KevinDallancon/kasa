@@ -1,0 +1,53 @@
+.collapse {
+  display: flex;
+  flex-direction: column;
+  max-width: 1023px;
+  height: auto ;
+
+  &.active {
+    .collapse_title_icon {
+      transform: rotate(0deg);
+    }
+
+    .collapse_content {
+      height: auto;
+      visibility: visible;
+    }
+  }
+
+  &_title {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    height: 47px;
+
+    .collapse_title_icon {
+      transition: transform .2s;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &_content {
+    padding-left: 10px;
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  
+    .active & {
+      max-height: 500px;  // Assurez-vous que cette valeur est suffisamment grande pour contenir tout votre contenu
+      opacity: 1;
+    }
+  }
+}

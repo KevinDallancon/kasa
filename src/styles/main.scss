@@ -1,24 +1,17 @@
-// main.scss
-
-// Abstracts
-@import "abstracts/variables";
-@import "abstracts/mixins";
-
-// Base
-
-@import "base/typography";
-
-// Layouts
+@import "./Utils/variables";
+@import "./Utils/mixins";
 
 
-// Components
+@import "./Base/Base";
 
 
-// Pages
+@import "../components/Banner/Banner";
+@import "../components/Card/Card";
+@import "../components/Collapse/Collapse";
+@import "../components/Gallery/gallery";
+@import "../components/Header/Header";
+@import "../components/Slideshow/Slideshow";
+@import "../components/Footer/footer";
 
-
-body {
-  margin-top: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
+@import "../pages/about.scss";
+@import "../pages/error404.scss"
