@@ -8,8 +8,7 @@ function Slideshow({ imageSlider }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideStyle = {
-    backgroundImage: `url(${imageSlider[currentIndex]})`, // Utilisez les backticks et l'URL de l'image
-
+    backgroundImage: `url(${imageSlider[currentIndex]})`,
   };
 
   const next = () => {

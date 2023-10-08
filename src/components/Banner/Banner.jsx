@@ -17,7 +17,7 @@ function Banner() {
     if(location.pathname === '/about'){
       setAboutPage(true)
     };
-  }, [])
+  }, [location.pathname])
 
   // Affichage ( render )
 

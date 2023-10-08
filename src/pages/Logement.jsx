@@ -57,7 +57,7 @@ function Logement() {
                     <span>{name[0]}</span>
                     <span>{name[1]}</span>
                   </div>
-                  <img src={data.host?.picture} alt="Photo de profil" />
+                  <img src={data.host?.picture} alt="picture user"/>
                 </div>
                 <div className="logement_content_host_container_stars">
                   {[...Array(5)].map((star, index) => {
