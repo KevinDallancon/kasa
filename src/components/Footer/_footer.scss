@@ -9,12 +9,19 @@
   p {
     color: white;
     width: 513px;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+    @include responsive(smartphone) {
+      width: 90%;
+      font-size: 12px ;
+    }
   }
   img {
     width: 122px;
+
+    
   }
 }

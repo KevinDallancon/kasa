@@ -6,4 +6,8 @@ body {
   margin: auto;
   max-width: 1440px;
   padding-top: 40px;
+  @include responsive(smartphone) {
+    padding-top: 20px;
+  }
+  
 }

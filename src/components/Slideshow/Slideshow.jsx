@@ -28,12 +28,18 @@ function Slideshow({ imageSlider }) {
 
   return (
     <section style={slideStyle} className='slideshowStyle'>
-        <div className='slideshowStyle_arrow'>
-        <img className='slideshowStyle_arrow_left'src={arrowLeft} alt='flechel' onClick={prev}/>
-        <img className='slideshowStyle_arrow_right'src={arrowRight} alt='flecheD' onClick={next}/>
-        </div>
+      <div className='slideshowStyle_arrow'>
+        {imageSlider.length > 1 && (
+          <div className='slideshowStyle_arrow_column'>
+            <img className='slideshowStyle_arrow_column_left' src={arrowLeft} alt='flechel' onClick={prev}/>
+            <img className='slideshowStyle_arrow_column_right' src={arrowRight} alt='flecheD' onClick={next}/>
+          </div>
+        )}
+        {imageSlider.length > 1 && (
+          <p className='slideshowStyle_arrow_index'>{currentIndex + 1} / {imageSlider.length}</p>
+        )}
+      </div>
     </section>
-    
 
   )
 }

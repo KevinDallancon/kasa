@@ -1,5 +1,5 @@
 .slideshowStyle {
-  border: 1px solid red;
+  max-width: 95%;
   width: 100%;
   height: 415px;
   background-position: center;
@@ -7,22 +7,48 @@
   display: flex;
   align-items: center;
   border-radius: 25px;
-
-  &_arrow {
-    border: 2px solid greenyellow;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    
-    &_left, &_right {
-      cursor: pointer;
-      height: 80px;
-      width: 50px;
-      border: 2px solid yellow;
-    }
-
+  margin-top: 50px;
+  margin-bottom: 30px;
+  @include responsive(smartphone) {
+    margin-top: 25px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    height: 255px;
   }
+    &_arrow {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &_index {
+        color: white;
+        position: absolute;
+        top: 230%;
+        font-weight: 500;
+        font-size: 18px;
+        @include responsive(smartphone) {
+          visibility: hidden;
+        }
+      }
+      
+      &_column {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &_left, &_right {
+          cursor: pointer;
+          height: 80px;
+          width: 50px;
+          @include responsive(smartphone) {
+          height: 20px;
+          width: 11px;
+          }
+        }
+      }
+  }
+
+
 
 }

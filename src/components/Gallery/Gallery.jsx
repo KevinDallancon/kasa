@@ -4,7 +4,7 @@ import myData from '../../data/dataLogement.json'
 
 function Gallery() {
 
-  return <main className='flex'>
+  return <section className='gallery'>
   <div className='box-card'>
     {myData.map((item) => (
         <Card 
@@ -15,7 +15,7 @@ function Gallery() {
         />
       ))}
     </div>
-  </main>
+  </section>
 
 }
 

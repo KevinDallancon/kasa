@@ -1,0 +1,107 @@
+.logement {
+  padding: 10px;
+  width: 95%;
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    @include responsive(smartphone) {
+      flex-direction: column;
+    }
+    &_infos {
+      color: $primary-color;
+      h1 { font-size: 36px;
+        font-weight: 500;
+        @include responsive(smartphone) {
+          font-size: 18px;
+        }
+      }
+      p { font-size: 18px;
+        @include responsive(smartphone) {
+          font-size: 14px;
+        }
+      }
+      &_tag {
+        button {
+          display: inline;
+          padding: 5px;
+          font-size: 14px;
+          border-radius: 10px;
+          background-color: $primary-color;
+          color: white;
+          margin-top: 5px;
+          margin-right: 10px;
+          cursor: pointer;
+          border: none;
+        }
+      }
+    }
+    &_host {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 40%;
+      @include responsive(smartphone) {
+        width: 100%;
+      }
+      &_container {
+        width: 30%;
+        @include responsive(smartphone) {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          width: 100%;
+          max-height: 33px;
+          align-items: center;
+          
+        }
+        &_flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include responsive(smartphone) {
+            width: 100px;
+          }
+          &_name {
+            max-width: 120px;
+            color: $primary-color;
+            display: flex;
+            flex-direction: column;
+            @include responsive(smartphone) {
+              font-size: 12px;
+              width: 40px;
+            }
+          }
+          img {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            @include responsive(smartphone) {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+        &_stars {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          @include responsive(smartphone) {
+            margin-top: 0;
+          }
+          img {
+            @include responsive (smartphone) {
+              width: 15px;
+              height: 15px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_collapse {
+    margin-bottom: 50px;
+  }
+}
+

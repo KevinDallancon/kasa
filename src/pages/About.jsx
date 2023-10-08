@@ -8,9 +8,9 @@ function About() {
   const dataAbout = Data;
 
   return (
-      <div className="aboutStyle">
+      <main className="aboutStyle">
           <Banner />
-          <main>
+          <section>
             {dataAbout.map( data => {
               return (
                 <div key={data.id}>
@@ -18,8 +18,8 @@ function About() {
                 </div>
               )}
             )}
-          </main>
-      </div>
+          </section>
+      </main>
   )
 }
 

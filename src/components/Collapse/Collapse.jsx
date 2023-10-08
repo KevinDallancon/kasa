@@ -16,9 +16,14 @@ function Collapse({title, content}) {
   return (
     <div className={`collapse ${active && "active"}`} >
       <h2 className="collapse_title" onClick={handleToggle}>{title}<img  className={`collapse_title_icon ${active ? 'active' : ''}`} src={Logo} alt="fleche blanche"/></h2>
-      <div className="collapse_hidden">
-        <p className = "collapse_content">{content}</p>
-      </div>
+      <div className={setActive ? 'collapse_content' : 'collapse_content_hidden'}>
+                    {Array.isArray(content) ? content.map((item, index) => {
+                        return (
+                            <p key={index}>{item}</p>
+                        )
+                    }) : content
+                    }
+        </div>
     </div>
   )
 }

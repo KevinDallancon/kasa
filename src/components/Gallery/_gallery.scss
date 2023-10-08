@@ -1,17 +1,35 @@
-.flex {
+.gallery {
+  max-width: 95%;
+  width: 100%;
   background: #F6F6F6;
   border-radius: 25px;
   height: auto;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  @include responsive(smartphone) {
+    background: none;
+    max-width: 100%;
+  }
 
   .box-card {
-  margin: 30px;
-  width: 95%;
+  max-width: 95%;
   height: auto;
   display: flex;
   justify-content: space-between;
   gap: 50px;
   flex-wrap: wrap;
+  @include responsive(smartphone) {
+      margin: 0;
+      flex-direction: column;   
+  }
+  @include responsive(tablet) {
+    margin: 0;
+    flex-direction: column;
+  }
   }
 
 }

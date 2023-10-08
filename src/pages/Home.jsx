@@ -3,7 +3,7 @@ import Gallery from '../components/Gallery/Gallery';
 
 function Home() { 
   return (
-    <main>
+    <main className='flex'>
       <Banniere />
       <Gallery />
     </main>

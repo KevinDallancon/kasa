@@ -3,7 +3,10 @@
   flex-direction: column;
   max-width: 1023px;
   height: auto ;
-
+  margin: 40px auto;
+  @include responsive (smartphone){
+    margin: 5px auto;
+  }
   &.active {
     .collapse_title_icon {
       transform: rotate(0deg);
@@ -16,6 +19,7 @@
   }
 
   &_title {
+    margin: 0;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -27,6 +31,9 @@
     font-size: 24px;
     font-weight: 500;
     height: 47px;
+    @include responsive (smartphone){
+      font-size: 13px;
+    }
 
     .collapse_title_icon {
       transition: transform .2s;
@@ -35,6 +42,7 @@
   }
 
   &_content {
+    padding-top: 10px;
     padding-left: 10px;
     color: $primary-color;
     font-weight: 400;
@@ -44,10 +52,35 @@
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, max-height 0.3s ease;
+    @include responsive (smartphone){
+      font-size: 13px;
+    }
+
+    p { margin: 5px;}
   
     .active & {
-      max-height: 500px;  // Assurez-vous que cette valeur est suffisamment grande pour contenir tout votre contenu
+      max-height: 1000px; // Assurez-vous que cette valeur est suffisamment grande pour contenir tout votre contenu
       opacity: 1;
     }
   }
+}
+.logement_collapse {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include responsive (smartphone){
+    flex-direction: column;
+  }
+  &_description, &_equipement {
+    width: 48%;
+    @include responsive (smartphone){
+      width: 100%;
+    }
+  }
+}
+
+.logement_collapse_description .collapse_content,
+.logement_collapse_equipement .collapse_content {
+    background-color: #F6F6F6;
+    padding: 10px;
 }
